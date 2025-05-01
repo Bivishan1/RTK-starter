@@ -1,0 +1,10 @@
+store = single source of true, jaha bata sabai chij ligne like global variable types
+reducer = help to change or update in store  (like in auth store, product store, means there are different portions in store) through function, it's like functionality which is an object
+now, there are 2 methods:
+useSelector = to select value from store
+useDispatch = to sent the value
+
+---
+1. first create a store and export it's configuration
+2. then, create reducers which is slicer(s),
+3. then, we crate a one folder 'features' to store slices function, which could contain multiple features, but here we only create one feature called 'Todo',
