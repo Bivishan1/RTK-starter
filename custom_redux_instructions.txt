@@ -6,5 +6,12 @@ useDispatch = to sent the value
 
 ---
 1. first create a store and export it's configuration
-2. then, create reducers which is slicer(s),
-3. then, we crate a one folder 'features' to store slices function, which could contain multiple features, but here we only create one feature called 'Todo',
+2. then, create reducers which is slicer(s), (inside features>toDo folder.
+3. then, we create a one folder 'features' to store slices function, which could contain multiple features, but here we only create one feature called 'Todo',
+3.1. [go through codebase code where details are in the comments]
+4. then,needs  to export (from our slice files that has a .js files),  we have to export from official syntax i.e. default export,, in the last,, where here 'todoSlice' is not valid export syntax, however, we have to configure it's export method with redux export method.
+5. now, go to store, to import reducer,
+6. Now, after export from store, now, we can access in any components we like using dispatch and useSelector.
+7. so, project flow will like this, at first, when we add to do from 'AddToDo.jsx' component logic which is a form, it has to first add to store, where add will be done by dispatch in 'Addtodo.jsx' component, we use dispatch in this component.
+8. now, in 'Todos.jsx', to display lists of todos , we need to use 'useSelector' to select all the todos state value from our slice. and we also need a button to remove that each list we want to delete, we also going to import 'removeToDo'
+
