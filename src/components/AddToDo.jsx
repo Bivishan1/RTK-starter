@@ -6,7 +6,7 @@ const AddToDo = () => {
 const [input, setInput] = React.useState('');
 // to send the data to store, we need to dispatch from the useDispatch hook
 // so, at first dispatch will use reducers to  send or add or change the data or value to the store
-const dispatch = useDispatch();
+const dispatch = useDispatch(); //
 
 const addSubmit = (e) => {
     e.preventDefault();
@@ -23,7 +23,7 @@ const addSubmit = (e) => {
           className="bg-gray-800 rouned border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
           placeholder="enter a todo.."
           value={input}
-          onchange={(e) => setInput(e.target.value)}
+          onChange={(e) => setInput(e.target.value)}
         />
         <button
           type="submit"

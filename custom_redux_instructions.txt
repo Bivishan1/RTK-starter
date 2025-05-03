@@ -14,4 +14,4 @@ useDispatch = to sent the value
 6. Now, after export from store, now, we can access in any components we like using dispatch and useSelector.
 7. so, project flow will like this, at first, when we add to do from 'AddToDo.jsx' component logic which is a form, it has to first add to store, where add will be done by dispatch in 'Addtodo.jsx' component, we use dispatch in this component.
 8. now, in 'Todos.jsx', to display lists of todos , we need to use 'useSelector' to select all the todos state value from our slice. and we also need a button to remove that each list we want to delete, we also going to import 'removeToDo'
-
+Note : dispatch mostly used to run functionality from our reducers within our component like add, remove or update.

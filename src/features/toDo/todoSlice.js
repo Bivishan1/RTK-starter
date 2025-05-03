@@ -27,10 +27,15 @@ export const todoSlice = createSlice({
       state.todos.push(todo); //we always do this in last , in todo object we can do other things like fetching api, fetching data n then add with push method (we use push method because we create array in our initialState) in our state. or add property (using object technique) if we create object in our initialState.
     },
     removeToDo: (state, action) => {
-      state.todos = state.todos.filter((todo) => {
+      // USING IMPLICIT RETURN TYPE, WHICH MEANS WITHOUT USING RETURN & {}
+      state.todos = state.todos.filter((todo) =>
+          todo.id !== action.payload)
         // so, here action.payload automatically match with the id  of the action payload e.g. removeToDo(1), so 1 will be id and will be filter out.
-        todo.id !== action.payload;
-      });
+      // using explicit return
+        //   state.todos = state.todos.filter((todo) => {
+  //   return todo.id !== action.payload;
+  // });
+      
     },
     updateToDo: (state, action) => {
       const { id, text } = action.payload;
